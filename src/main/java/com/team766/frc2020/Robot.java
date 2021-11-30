@@ -4,6 +4,7 @@ import com.team766.framework.AutonomousProcedureUtils;
 import com.team766.framework.Procedure;
 import com.team766.framework.Scheduler;
 import com.team766.framework.LaunchedContext;
+import com.team766.framework.Mechanism;
 import com.team766.frc2020.mechanisms.*;
 import com.team766.hal.MyRobot;
 import com.team766.hal.RobotProvider;
@@ -17,7 +18,8 @@ import com.team766.web.WebServer;
 
 public class Robot extends MyRobot {
 	// Declare mechanisms here
-	
+	public static Drive drive;
+	public static Launcher launcher;
 	
 	private static OI m_oi;
 	
@@ -29,6 +31,7 @@ public class Robot extends MyRobot {
 	// Reset the autonomous routine if the robot is disabled for more than this
 	// number of seconds.
 	private static final double RESET_IN_DISABLED_PERIOD = 10.0;
+  public static final Mechanism arms = null;
 	private double m_disabledModeStartTime;
 
 	public Robot() {
@@ -43,7 +46,8 @@ public class Robot extends MyRobot {
 	@Override
 	public void robotInit() {
 		// Initialize mechanisms here
-		
+		drive = new Drive();
+		launcher = new Launcher();
 		
 		m_oi = new OI();
 	}

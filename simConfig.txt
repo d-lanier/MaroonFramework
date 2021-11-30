@@ -19,6 +19,14 @@
 			"port": 12
 		}
 	},
+	"arms": {
+		"leftServo": {
+			"port": 2
+		},
+		"rightServo": {
+			"port": 3
+		}
+	},
 	"intakeWheels": {
 		"port": 0
 	},
@@ -27,12 +35,6 @@
 	},
 	"launch": {
 		"port": 1
-	},
-	"lineSensorLeft": {
-		"port": 2
-	},
-	"lineSensorCenter": {
-		"port": 3
 	},
 	"lineSensorRight": {
 		"port": 4

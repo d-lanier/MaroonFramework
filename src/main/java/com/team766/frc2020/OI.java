@@ -26,12 +26,30 @@ public class OI extends Procedure {
 	}
 	
 	public void run(Context context) {
+		context.takeOwnership(Robot.drive);
 		while (true) {
 			// Add driver controls here - make sure to take/release ownership
 			// of mechanisms when appropriate.
-			
+			Robot.drive.setArcadeDrivePower(m_joystick0.getAxis(1), m_joystick1.getAxis(1));
+
+			Robot.arms.setArmsPower(m_joystick2.getAxis(1), m_joystick2.getAxis(1));
 
 			context.waitFor(() -> RobotProvider.instance.hasNewDriverStationData());
 		}
 	}
 }
+
+
+
+
+
+
+
+
+// log("J0 A0: " + m_joystick0.getAxis(0) +
+// 			    "  J0 A1: " + m_joystick0.getAxis(1) +
+// 			    "  J1 A0: " + m_joystick1.getAxis(0) +
+// 			    "  J1 A1: " + m_joystick1.getAxis(1) +
+// 			    "  J0 B1: " + m_joystick0.getButton(1) +
+// 			    "  J0 B2: " + m_joystick0.getButton(2) +
+// 				"  J0 B3: " + m_joystick0.getButton(3));

@@ -52,4 +52,7 @@ public abstract class Mechanism extends Loggable implements Runnable {
 
 	@Override
 	public void run () {}
+
+  public void setArmsPower(double d, double e) {
+  }
 }
